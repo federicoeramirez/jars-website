@@ -53,6 +53,7 @@ if st.button('Make Playlist'):
             client_secret=client_secret,
             redirect_uri="https://federicoeramirez-jars-website-app-test-branch-x6qu44.streamlit.app/",
             scope="playlist-modify-private",
+            open_browser=False
             #scope="user-library-read"
             )
         )
