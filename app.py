@@ -51,7 +51,7 @@ if st.button('Make Playlist'):
         auth_manager= spotipy.SpotifyOAuth(
             client_id=client_id,
             client_secret=client_secret,
-            redirect_uri="http://127.0.0.1:9090",
+            redirect_uri="https://federicoeramirez-jars-website-app-test-branch-x6qu44.streamlit.app/",
             scope="playlist-modify-private",
             #scope="user-library-read"
             )
