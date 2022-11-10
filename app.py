@@ -33,13 +33,15 @@ if st.button('Get recommendation list'):
 
     list_of_songs = []
 
-    for i in range(amount-1):
+    for i in range(amount):
         list_of_songs.append(response_list[0][f'{i}'])
 
 
     st.write(list_of_songs)
 
 if st.button('Make playlist'):
+    st.text('Feature under development. It may not work properly (yet)!')
+
     username = None
     client_id = 'b8c39473bf4a4b7ea9deeadad8ecd9ae'
     client_secret = 'c3a78c3d7ba54691b07e9198cfe8783e'
@@ -49,8 +51,8 @@ if st.button('Make playlist'):
         auth_manager= spotipy.SpotifyOAuth(
             client_id=client_id,
             client_secret=client_secret,
-            redirect_uri="https://federicoeramirez-jars-website-app-test-branch-x6qu44.streamlit.app/",
-            #redirect_uri='http://127.0.0.1:9090',
+            #redirect_uri="https://federicoeramirez-jars-website-app-test-branch-x6qu44.streamlit.app/",
+            redirect_uri='http://127.0.0.1:9090',
             scope="playlist-modify-private"
             )
         )
@@ -64,7 +66,7 @@ if st.button('Make playlist'):
 
     list_of_id = []
 
-    for i in range(amount-1):
+    for i in range(amount):
         list_of_id.append(response_list[1][f'{i}'])
 
     playlist = sp.user_playlist_create(user_id,
