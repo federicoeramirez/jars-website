@@ -3,7 +3,7 @@ import requests
 import spotipy
 
 '''
-# JARS 1.0
+# (Not)JARS 1.0
 '''
 
 st.markdown('''
